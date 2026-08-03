@@ -16,3 +16,15 @@ class TelaInicial(QWidget):
         layout = QVBoxLayout(self)
         layout.setContentsMargins(30,30,30,30)
         layout.setSpacing(0)
+
+        titulo_inicio = QLabel("Biblioteca Central")
+        titulo_inicio.setObjectName("TituloInicio")
+
+        subtitulo_inicio = QLabel("Visão Geral")
+        subtitulo_inicio.setObjectName("SubtituloInicio")
+
+        layout.addWidget(titulo_inicio)
+        layout.addWidget(subtitulo_inicio)
+
+        
+
