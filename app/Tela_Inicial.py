@@ -1,6 +1,7 @@
 from PySide6.QtCore import Qt
 from PySide6.QtGui import QPixmap
 from PySide6.QtWidgets import QFrame, QLabel, QWidget, QVBoxLayout
+from app.aluno_e_bibliotecario import Aluno, Bibliotecario, Livro, Emprestimo
 
 LARGURA = 1800
 ALTURA = 920
