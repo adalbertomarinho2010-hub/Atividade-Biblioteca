@@ -2,32 +2,51 @@ from app.pessoa import Pessoa
 
 
 class Aluno(Pessoa):
-    def __init__(self, nome, cpf):
-        super().__init__(nome, cpf)
+  def __init__(self, nome: str, cpf: str, matricula):
+    super().__init__(nome, cpf)
+    self.matricula = matricula
 
-class Bibliotecario():
-    nome: str
+    return Aluno
 
 
-class Livro:
-    nome: str
-    id: str
-    categoria: str
-    autor: str
-    status: str
+class Bibliotecario(Pessoa):
+   def __init__(self, nome: str, cpf: str, registro):
+    super().__init__(nome, cpf)
+    self.registro = registro
 
-    def marcar_emprestado():
-        nome:str
+    return Bibliotecario
+
+
+class Livro():
+  def __init__(self, nome_livro, id_livro, autor, disponivel):
+    super().__init__(nome_livro, id_livro, autor, disponivel)
+    self.nome_livro = nome_livro
+    self.id_livro = id_livro
+    self.autor = autor
+    self.disponivel = True
+
+
+    def marcar_emprestado(self):
+        self.disponivel = False
     
-    def marcar_disponivel():
-        nome:str
+    def marcar_disponivel(self):
+        self.disponivel = True
 
-class Emprestimo:
-    def devolucao():
+    return Livro
+
+class Emprestimo():
+   def __init__(self, nome_livro, id_livro, autor, disponivel, data, atraso):
+    super().__init__(nome_livro, id_livro, autor, disponivel)
+    self.data = data
+    self.atraso = atraso
+
+
+    def devolucao(self):
+        if self.disponivel == False:
+           nome: str
+
+    def adicionar_data(self):
         nome: str
 
-    def adicionar_data():
-        nome: str
-
-    def multa():
+    def multa(self):
         nome: str
